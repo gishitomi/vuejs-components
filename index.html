@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>コンポーネント！</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="fruits-list">
-      <page-header>
-        <h1 slot="header">夏の果物</h1>
-      </page-header>
-      <page-content>
-        <ul slot="content">
-          <li>スイカ</li>
-          <li>マンゴー</li>
-        </ul>
-      </page-content>
+        <page-header>
+            <h1 slot="header">夏の果物</h1>
+        </page-header>
+        <page-content>
+            <ul slot="content">
+                <li>スイカ</li>
+                <li>マンゴー</li>
+            </ul>
+        </page-content>
     </div>
-    <div id="login-example"><user-login></user-login></div>
+    <div id="login-example">
+        <user-login></user-login>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script type="text/x-template" id="login-template">
-      <div id="login-template">
-        <div>
-          <input type="text" placeholder="ログインID" v-model="id">
+        <div id="login-template">
+            <div>
+                <input type="text" placeholder="ログインID" v-model="id">
+            </div>
+            <div>
+                <input type="text" placeholder="パスワード" v-model="password">
+            </div>
+            <button v-on:click="loginBtn()">ログイン</button>
+            <!-- {{$data}} -->
         </div>
-        <div>
-          <input type="text" placeholder="パスワード" v-model="password">
-        </div>
-        <button v-on:click="loginBtn()">ログイン</button>
-        {{$data}}
-      </div>
     </script>
     <script src="./app.js"></script>
-  </body>
+</body>
+
 </html>
