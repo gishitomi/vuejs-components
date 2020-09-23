@@ -18,8 +18,20 @@
         </ul>
       </page-content>
     </div>
+    <div id="login-example"><user-login></user-login></div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script type="text/x-template" id="login-template">
+      <div id="login-template">
+        <div>
+          <input type="text" placeholder="ログインID" v-model="id">
+        </div>
+        <div>
+          <input type="text" placeholder="パスワード" v-model="password">
+        </div>
+        <button v-on:click="loginBtn()">ログイン</button>
+        {{$data}}
+      </div>
+    </script>
     <script src="./app.js"></script>
-    <script type="text/x-template" id="login-template"></script>
   </body>
 </html>
